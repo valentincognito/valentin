@@ -26,10 +26,7 @@ $injector = include('Dependencies.php');
 $request = $injector->make('Http\HttpRequest');
 $response = $injector->make('Http\HttpResponse');
 
-
-
-
-
+// Fast Routes
 $routeDefinitionCallback = function (\FastRoute\RouteCollector $r) {
   $routes = include('Routes.php');
   foreach ($routes as $route) {
@@ -58,11 +55,7 @@ switch ($routeInfo[0]) {
     $class->$method($vars);
   break;
 }
-
-
-
-
-
+// Fast Routes End
 
 foreach ($response->getHeaders() as $header) {
   header($header, false);
