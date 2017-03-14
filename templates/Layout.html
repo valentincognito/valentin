@@ -1,6 +1,28 @@
-{% for item in menuItems %}
-  <a href="{{ item['href'] }}">{{ item['text'] }}</a><br>
-{% endfor %}
-<hr>
-{% block content %}
-{% endblock %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Valentin</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/all.css">
+  </head>
+  <body>
+    <div id="layout">
+        <div id="menu">
+          <div class="pure-menu">
+            <ul class="pure-menu-list">
+              {% for item in menuItems %}
+                <li class="pure-menu-item"><a href="{{ item['href'] }}" class="pure-menu-link">{{ item['text'] }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div id="main">
+          <div class="content">
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

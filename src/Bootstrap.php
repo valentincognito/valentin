@@ -5,6 +5,9 @@ require __DIR__ . '/../vendor/autoload.php';
 
 error_reporting(E_ALL);
 
+/**
+* Environment variable
+*/
 $environment = 'development';
 
 /**
@@ -26,7 +29,9 @@ $injector = include('Dependencies.php');
 $request = $injector->make('Http\HttpRequest');
 $response = $injector->make('Http\HttpResponse');
 
-// Fast Routes
+/**
+* Register fast routes handler
+*/
 $routeDefinitionCallback = function (\FastRoute\RouteCollector $r) {
   $routes = include('Routes.php');
   foreach ($routes as $route) {
@@ -55,7 +60,6 @@ switch ($routeInfo[0]) {
     $class->$method($vars);
   break;
 }
-// Fast Routes End
 
 foreach ($response->getHeaders() as $header) {
   header($header, false);

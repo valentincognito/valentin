@@ -3,8 +3,8 @@
 namespace App\Controllers;
 
 use Http\Response;
-use App\Template\Renderer;
 use App\Page\PageReader;
+use App\Template\FrontendRenderer;
 
 class Page
 {
@@ -12,7 +12,7 @@ class Page
   private $renderer;
   private $pageReader;
 
-  public function __construct(Response $response, Renderer $renderer, PageReader $pageReader) 
+  public function __construct(Response $response, FrontendRenderer $renderer, PageReader $pageReader) 
   {
     $this->response = $response;
     $this->renderer = $renderer;
