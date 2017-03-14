@@ -17,6 +17,16 @@
             </ul>
           </div>
         </div>
+      
+        <header class="header">
+          <div id="particles-js"></div>
+          <div class="info-box">
+            <h1>Valentin Vannay</h1>
+            <a href="https://github.com/valentincognito" target="_blank">@valentincognito</a>
+          </div>
+        </header><!-- header end -->
+        
+        </div>
         <div id="main">
           <div class="content">
             {% block content %}
@@ -24,5 +34,11 @@
           </div>
         </div>
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript">
+      particlesJS.load('particles-js', '/assets/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
+    </script>
   </body>
 </html>

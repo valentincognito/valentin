@@ -1,6 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,800');
+
+/*@import url('https://fonts.googleapis.com/css?family=Special+Elite');*/
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+}
 body {
   color: #777;
 }
+
+a {background-color: transparent;text-decoration: none;color: inherit;display: block;}
+a:active,
+a:hover {outline: 0;text-decoration: none;color: inherit;}
+
 
 #layout {
   position: relative;
@@ -24,26 +44,7 @@ body {
   line-height: 1.6em;
 }
 
-.header {
-  margin: 0;
-  color: #333;
-  text-align: center;
-  padding: 2.5em 2em 0;
-  border-bottom: 1px solid #eee;
-}
 
-.header h1 {
-  margin: 0.2em 0;
-  font-size: 3em;
-  font-weight: 300;
-}
-
-.header h2 {
-  font-weight: 300;
-  color: #ccc;
-  padding: 0;
-  margin-top: 0;
-}
 
 #menu {
   margin-left: -150px;
@@ -95,7 +96,6 @@ body {
   margin: 0;
 }
 
-.header,
 .content {
   padding-left: 2em;
   padding-right: 2em;
@@ -118,3 +118,35 @@ body {
 #layout.active .menu-link {
   left: 150px;
 }
+
+
+
+.header{
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.header .info-box{
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  color: #fff;
+}
+
+canvas {
+  display: block;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2a68a9;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
