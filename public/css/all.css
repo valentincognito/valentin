@@ -11,6 +11,7 @@
 
 html{
   font-family: 'Muli', sans-serif;
+  font-size: 14px;
   font-weight: 400;
 }
 body {
@@ -37,9 +38,9 @@ a:hover {outline: 0;text-decoration: none;color: inherit;}
 }
 
 .content {
-  margin: 0 auto;
-  padding: 0 2em;
-  max-width: 800px;
+  margin: 0;
+  padding: 0 4em;
+  max-width: 960px;
   margin-bottom: 50px;
   line-height: 1.6em;
 }
@@ -96,10 +97,6 @@ a:hover {outline: 0;text-decoration: none;color: inherit;}
   margin: 0;
 }
 
-.content {
-  padding-left: 2em;
-  padding-right: 2em;
-}
 
 #layout {
   padding-left: 150px; /* left col width "#menu" */
@@ -120,17 +117,48 @@ a:hover {outline: 0;text-decoration: none;color: inherit;}
 }
 
 
+h2{
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+  font-weight: 300;
+}
+h2:before{
+  content: '#';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #0060b7;
+}
+h2:after{
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: -110px;
+  width: 100px;
+  height: 1px;
+  background: #ececec;
+}
 
 .header{
   position: relative;
   width: 100%;
   height: 200px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ececec;
 }
+.header h1{
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #0060b7;
+}
+.header h1 span{color: #191818;}
 .header .info-box{
   position: absolute;
   top: 30px;
-  left: 100px;
-  color: #fff;
+  left: 4em;
+  font-weight: 300;
+  color: #666;
 }
 
 canvas {
@@ -143,7 +171,7 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #2a68a9;
+  background-color: #fff;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
