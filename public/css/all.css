@@ -178,6 +178,23 @@ h3:after{
   font-weight: 200;
   padding: 4px 20px;
 }
+
+.home-features-list{
+  list-style: none;
+  padding: 0px;
+}
+.home-features-list li{margin-bottom: 10px;}
+.home-features-list .chart-bar{
+  width: 300px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #ececec;
+  overflow: hidden;
+}
+.home-features-list .chart-bar .inner{
+  height: 100%;
+  background-color: #0060b7;
+}
 /* ===== Home end ===== */
 
 

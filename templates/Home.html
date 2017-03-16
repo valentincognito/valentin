@@ -1,7 +1,7 @@
 {% extends "Layout.html" %}
 {% block content %}
   <h3>Hello {{ name }}</h3>
-  <p>"All growth depends upon activity. There is no development physically or intellectually without effort, and effort means work."</p>
+  <p>Valentin is our brand new worker designed to fit in every team and adapt to various situations. He is shipped with many basic functionalities and can easily be upgraded. Valentin is reliable and seeks to grow his passion for web development along with his peers.</p>
 
   <h3>Hardware specs</h3>
   <table class="home-hardware-specs-table">
@@ -24,13 +24,44 @@
   </table>
 
   <h3>Features</h3>
-  <ul>
-    <li>HTML</li>  
-    <li>CSS</li>
-    <li>PHP</li>
-    <li>JS / jQuery</li>
-    <li>Node</li>
+  <ul class="home-features-list">
+    <li>
+      <span>HTML</span>
+      <div class="chart-bar">
+        <div style="width: 80%;background-color: #ec662b;" class="inner"></div>
+      </div>
+    </li>
+    <li>
+      <span>CSS</span>
+      <div class="chart-bar">
+        <div style="width: 50%;background-color: #563d7c;" class="inner"></div>
+      </div>
+    </li>
+    <li>
+      <span>PHP</span>
+      <div class="chart-bar">
+        <div style="width: 60%;background-color: #4F5D95;" class="inner"></div>
+      </div>
+    </li>
+    <li>
+      <span>JS / jQuery</span>
+      <div class="chart-bar">
+        <div style="width: 75%;background-color: #f0da50;" class="inner"></div>
+      </div>
+    </li>
+    <li>
+      <span>Node</span>
+      <div class="chart-bar">
+        <div style="width: 20%;background-color: #90c53f;" class="inner"></div>
+      </div>
+    </li>
   </ul>
 
   <h3>Previous owner</h3>
+  <ul>
+    <li>Cesar Ritz Colleges</li>
+    <li>Swiss Hotel School Managment</li>
+    <li>Saltcake</li>
+    <li>Enable Korea</li>
+  </ul>
 {% endblock %}
