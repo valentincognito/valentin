@@ -26,21 +26,21 @@
   <h3>Features</h3>
   <ul class="home-features-list">
     <li>
+      <span>PHP</span>
+      <div class="chart-bar">
+        <div style="width: 80%;background-color: #4F5D95;" class="inner"></div>
+      </div>
+    </li>
+    <li>
       <span>HTML</span>
       <div class="chart-bar">
-        <div style="width: 80%;background-color: #ec662b;" class="inner"></div>
+        <div style="width: 95%;background-color: #ec662b;" class="inner"></div>
       </div>
     </li>
     <li>
       <span>CSS</span>
       <div class="chart-bar">
-        <div style="width: 50%;background-color: #563d7c;" class="inner"></div>
-      </div>
-    </li>
-    <li>
-      <span>PHP</span>
-      <div class="chart-bar">
-        <div style="width: 60%;background-color: #4F5D95;" class="inner"></div>
+        <div style="width: 90%;background-color: #563d7c;" class="inner"></div>
       </div>
     </li>
     <li>
@@ -57,11 +57,19 @@
     </li>
   </ul>
 
-  <h3>Previous owner</h3>
-  <ul>
-    <li>Cesar Ritz Colleges</li>
-    <li>Swiss Hotel School Managment</li>
-    <li>Saltcake</li>
-    <li>Enable Korea</li>
+  <h3>Happy users</h3>
+  <ul class="home-happy-users-list">
+    <li><span class="flag-icon flag-icon-ch"></span> Cesar Ritz Colleges (4 years)</li>
+    <li><span class="flag-icon flag-icon-ch"></span> Swiss Education Group (2 years)</li>
+    <li><span class="flag-icon flag-icon-kr"></span> Saltcake (1 year)</li>
+    <li><span class="flag-icon flag-icon-kr"></span> Enable Korea (6 months)</li>
   </ul>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+  $(document).ready(function(){
+    console.log('ready');
+  });/* document ready end */
+</script>
 {% endblock %}

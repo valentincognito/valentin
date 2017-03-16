@@ -185,7 +185,7 @@ h3:after{
 }
 .home-features-list li{margin-bottom: 10px;}
 .home-features-list .chart-bar{
-  width: 300px;
+  width: 400px;
   height: 4px;
   border-radius: 10px;
   background-color: #ececec;
@@ -193,7 +193,17 @@ h3:after{
 }
 .home-features-list .chart-bar .inner{
   height: 100%;
+  opacity: 0.8;
   background-color: #0060b7;
+}
+.home-happy-users-list{
+  list-style: none;
+  padding: 0px;
+}
+.home-happy-users-list li{margin-bottom: 10px;}
+.home-happy-users-list li::before {
+  content: "__ ";
+  color: #ececec; /* or whatever color you prefer */
 }
 /* ===== Home end ===== */
 
