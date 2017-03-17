@@ -8,6 +8,7 @@ class ArrayMenuReader implements MenuReader
   {
     return [
       ['href' => '/', 'text' => 'Home'],
+      ['href' => '/portfolio', 'text' => 'Portfolio'],
       ['href' => 'http://www.valentinvannay.com', 'text' => 'Blog'],
     ];
   }

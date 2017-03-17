@@ -1,0 +1,23 @@
+{% extends "Layout.html" %}
+{% block content %}
+
+  <h3>Portfolio</h3>
+
+
+  <div class="portfolio-showcase-wrapper clearfix">
+    {% for i in 0..6 %}
+      <div class="case">
+        Projet {{ i }}
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+  $(document).ready(function(){
+
+  });/* document ready end */
+</script>
+{% endblock %}
