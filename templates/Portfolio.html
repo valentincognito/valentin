@@ -1,18 +1,28 @@
 {% extends "Layout.html" %}
 {% block content %}
 
-  <h3>Portfolio</h3>
+  <style>
+    header{display: none;}
+  </style>
+  
+  
 
   <div class="portfolio-content-wrapper clearfix">
     
-    <div class="portfolio-info">A simple a list of my collaboration on various projects these past years. As a full stack developer I had different roles on every project some of them are entirely made by myself.</div>
+    <div class="portfolio-info">
+      <h3>Portfolio</h3>
+      <br>
+      A simple a list of my collaboration on various projects these past years. As a full stack developer I had different roles on every project some of them are entirely made by myself.
+    </div>
 
     <div class="portfolio-showcase-wrapper">
       {% for project in projects %}
         <div class="case">
           <div class="layer"></div>
-          <div class="layer"></div>
-          <div class="front">{{ project.name }}</div>
+          <div class="layer" style="background-image: url('{{ project.thumbnail }}');"></div>
+          <div class="front">
+            <div class="title">{{ project.name }}</div>
+          </div><!-- front end -->
         </div>
       {% endfor %}
     </div>
