@@ -75,7 +75,7 @@ h3:after{
 .content {
   margin: 0;
   padding: 0 4em;
-  max-width: 960px;
+  width: 100%;
   margin-bottom: 50px;
   line-height: 1.6em;
 }
@@ -208,65 +208,87 @@ h3:after{
 /* ===== Home end ===== */
 
 /* ===== Portfolio ===== */
+.portfolio-content-wrapper{
+  position: relative;
+  width: 100%;
+}
+.portfolio-info{
+  float: left;
+  width: 20%;
+}
 .portfolio-showcase-wrapper{
-  width: 120%;
+  float: right;
+  width: 70%;
+  text-align: right;
   transform: perspective(2000px) 
-             translate3d(100px, 100px, 0px) 
+             translate3d(0px, -100px, 0px) 
              scale3d(0.8, 0.8, 1) 
              rotateY(-30deg) 
-             rotateZ(5deg);
+             rotateZ(0deg);
   transform-style: preserve-3d;
 }
 .portfolio-showcase-wrapper .case{
-  float: left;
+  cursor: pointer;
+  display: inline-block;
   position: relative;
   width: 300px;
   height: 300px;
   margin: 10px;
-  padding: 20px;
+  text-align: left;
   color: #fff;
-  background-image: url('http://www.saltcake.com/images/works/thumbnails/sktelink_thumbnail.jpg');
-  background-size: 150% 150%;
-  
-
-  transform-origin: 100% 100%;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-/*
-.portfolio-showcase-wrapper .case:after{
-  content: '';
+.portfolio-showcase-wrapper .case:hover .front{
+  cursor: pointer;
+  transform: translate3d(0px, 0px, 0px) 
+             scale3d(1, 1, 1) 
+             rotateY(0deg) 
+             rotateX(-15deg)
+             rotateZ(-0deg);
+  transform-origin: 100% 100%;
+}
+.portfolio-showcase-wrapper .case:hover .layer:nth-child(2){
+  cursor: pointer;
+  transform: translate3d(0px, 0px, 0px) 
+             scale3d(1, 1, 1) 
+             rotateY(0deg) 
+             rotateX(-7deg)
+             rotateZ(-0deg);
+  transform-origin: 100% 100%;
+}
+
+.portfolio-showcase-wrapper .front{
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
-  background: #0060b7;
-  z-index: -1;
+  padding: 20px;
+  
+  background: #fff;
+  opacity: 0.6;
+  color: #000;
   
   transform-origin: 100% 100%;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-*/
 
-.portfolio-showcase-wrapper .case:hover{
-  cursor: pointer;
-  
-  transform: translate3d(0px, 0px, 0px) 
-             scale3d(1, 1, 1) 
-             rotateY(0deg) 
-             rotateX(-15deg)
-             rotateZ(-0deg);
+.portfolio-showcase-wrapper .layer{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #0060b7;
   transform-origin: 100% 100%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-/*
-.portfolio-showcase-wrapper .case:hover:after{
-  transform: translate3d(0px, 0px, 0px) 
-             scale3d(1, 1, 1) 
-             rotateY(0deg) 
-             rotateX(-15deg)
-             rotateZ(-0deg);
-  transform-origin: 100% 100%;
+.portfolio-showcase-wrapper .layer:nth-child(1){
+  background: #000;
 }
-*/
+.portfolio-showcase-wrapper .layer:nth-child(2){
+  background-image: url('http://www.saltcake.com/images/works/thumbnails/sktelink_thumbnail.jpg');
+  background-size: 150% 150%;
+}
 /* ===== Portfolio end ===== */
 

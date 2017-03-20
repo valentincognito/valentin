@@ -3,14 +3,22 @@
 
   <h3>Portfolio</h3>
 
+  <div class="portfolio-content-wrapper clearfix">
+    
+    <div class="portfolio-info">A simple a list of my collaboration on various projects these past years.</div>
 
-  <div class="portfolio-showcase-wrapper clearfix">
-    {% for i in 0..6 %}
-      <div class="case">
-        Projet {{ i }}
-      </div>
-    {% endfor %}
-  </div>
+    <div class="portfolio-showcase-wrapper">
+      {% for i in 0..6 %}
+        <div class="case">
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="front">Projet {{ i }}</div>
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div><!-- portfolio-content-wrapper end -->
+  
 
 {% endblock %}
 
