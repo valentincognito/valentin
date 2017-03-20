@@ -211,6 +211,7 @@ h3:after{
 .portfolio-content-wrapper{
   position: relative;
   width: 100%;
+  margin-top: 50px;
 }
 .portfolio-info{
   float: left;
@@ -290,7 +291,11 @@ h3:after{
 }
 
 .portfolio-showcase-wrapper .front .title{
+  margin-bottom: 10px;
   font-size: 24px;
+}
+.portfolio-showcase-wrapper .front .company{
+  font-size: 18px;
 }
 /* ===== Portfolio end ===== */
 

@@ -22,6 +22,7 @@
           <div class="layer" style="background-image: url('{{ project.thumbnail }}');"></div>
           <div class="front">
             <div class="title">{{ project.name }}</div>
+            <div class="company"><i class="fa fa-copyright" aria-hidden="true"></i> {{ project.company }}</div>
           </div><!-- front end -->
         </div>
       {% endfor %}
@@ -29,7 +30,6 @@
     
   </div><!-- portfolio-content-wrapper end -->
   
-
 {% endblock %}
 
 {% block scripts %}
