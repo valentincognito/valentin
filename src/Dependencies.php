@@ -43,4 +43,6 @@ $injector->alias('App\Template\FrontendRenderer', 'App\Template\FrontendTwigRend
 $injector->alias('App\Menu\MenuReader', 'App\Menu\ArrayMenuReader');
 $injector->share('App\Menu\ArrayMenuReader');
 
+$injector->share('App\Models\ArticleModel');
+
 return $injector;
