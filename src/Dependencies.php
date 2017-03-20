@@ -43,6 +43,13 @@ $injector->alias('App\Template\FrontendRenderer', 'App\Template\FrontendTwigRend
 $injector->alias('App\Menu\MenuReader', 'App\Menu\ArrayMenuReader');
 $injector->share('App\Menu\ArrayMenuReader');
 
-$injector->share('App\Models\ArticleModel');
+$injector->share('PDO');
+$injector->define('PDO', [
+    ':dsn' => 'mysql:dbname=knowyoz6_valentincognito;host=50.87.140.115',
+    ':username' => getenv('PHP_DB_USER'),
+    ':passwd' => getenv('PHP_DB_PASS')
+]);
+
+$db = $injector->make('PDO');
 
 return $injector;

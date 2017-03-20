@@ -8,11 +8,11 @@
     <div class="portfolio-info">A simple a list of my collaboration on various projects these past years. As a full stack developer I had different roles on every project some of them are entirely made by myself.</div>
 
     <div class="portfolio-showcase-wrapper">
-      {% for i in 0..6 %}
+      {% for project in projects %}
         <div class="case">
           <div class="layer"></div>
           <div class="layer"></div>
-          <div class="front">Projet {{ i }}</div>
+          <div class="front">{{ project.name }}</div>
         </div>
       {% endfor %}
     </div>

@@ -6,21 +6,32 @@ use Http\Request;
 use Http\Response;
 use App\Template\FrontendRenderer;
 
+use App\Models\ProjectModel;
+include __DIR__. '/../Models/Projects.php';
+
 class Portfolio
 {
   private $request;
   private $response;
 
-  public function __construct(Request $request, Response $response, FrontendRenderer $renderer)
+  public function __construct(Request $request, Response $response, FrontendRenderer $renderer, \PDO $db)
   {
     $this->request = $request;
     $this->response = $response;
     $this->renderer = $renderer;
+    $this->db = $db;
   }
 
   public function show()
   {    
-    $html = $this->renderer->render('Portfolio');
+    $projects = new ProjectModel($this->db);
+    $projects = $projects->getAllProjects();
+    
+    $data = [
+      'projects' => $projects,
+    ];
+    
+    $html = $this->renderer->render('Portfolio', $data);
     $this->response->setContent($html);
   }
 }
