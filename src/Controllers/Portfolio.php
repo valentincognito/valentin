@@ -6,8 +6,7 @@ use Http\Request;
 use Http\Response;
 use App\Template\FrontendRenderer;
 
-use App\Models\ProjectModel;
-include __DIR__. '/../Models/Projects.php';
+use App\Models\Projects;
 
 class Portfolio
 {
@@ -24,7 +23,7 @@ class Portfolio
 
   public function show()
   {    
-    $projects = new ProjectModel($this->db);
+    $projects = new Projects($this->db);
     $projects = $projects->getAllProjects();
     
     $data = [

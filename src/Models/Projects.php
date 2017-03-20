@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class ProjectModel
+class Projects
 {
   protected $db;
 

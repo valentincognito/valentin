@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class ArticleModel
+class Articles
 {
   protected $db;
 
