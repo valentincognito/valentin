@@ -55,7 +55,13 @@ h3:after{
   height: 1px;
   background: #ececec;
 }
-
+h5{
+  position: relative;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 300;
+  color: #191818;
+}
 
 /* ===== Layout ===== */
 #layout {
@@ -203,7 +209,7 @@ h3:after{
 .home-happy-users-list li{margin-bottom: 10px;}
 .home-happy-users-list li::before {
   content: "__ ";
-  color: #ececec; /* or whatever color you prefer */
+  color: #ececec;
 }
 /* ===== Home end ===== */
 
@@ -215,8 +221,20 @@ h3:after{
 }
 .portfolio-info{
   float: left;
+  position: fixed;
+  top: 80px;
+  left: 200px;
   width: 30%;
 }
+.portfolio-info .colors-list{
+  list-style: none;
+  padding: 0px;
+  font-weight: 200;
+}
+.portfolio-info .colors-list .fa.front{margin-right: 10px;color: #ffab39;}
+.portfolio-info .colors-list .fa.dev{margin-right: 10px;color: #2497ff;}
+.portfolio-info .colors-list .fa.fullstack{margin-right: 10px;color: #ff0338;}
+
 .portfolio-showcase-wrapper{
   float: right;
   width: 70%;
@@ -238,40 +256,18 @@ h3:after{
   text-align: left;
   color: #fff;
 }
-.portfolio-showcase-wrapper .case:hover .front{
-  cursor: pointer;
-  transform: translate3d(0px, 0px, 0px) 
-             scale3d(1, 1, 1) 
-             rotateY(0deg) 
-             rotateX(-20deg)
-             rotateZ(-0deg);
-  transform-origin: 100% 100%;
-}
-.portfolio-showcase-wrapper .case:hover .layer:nth-child(2){
-  cursor: pointer;
-  transform: translate3d(0px, 0px, 0px) 
-             scale3d(1, 1, 1) 
-             rotateY(0deg) 
-             rotateX(-10deg)
-             rotateZ(-0deg);
-  transform-origin: 100% 100%;
-}
-
-.portfolio-showcase-wrapper .front{
+.portfolio-showcase-wrapper .info{
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
   padding: 20px;
-  
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
-  
   transform-origin: 100% 100%;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .portfolio-showcase-wrapper .layer{
   position: absolute;
   top: 0px;
@@ -283,19 +279,50 @@ h3:after{
   transform-origin: 100% 100%;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.portfolio-showcase-wrapper .layer:nth-child(1){
-  background: #0060b7;
-}
-.portfolio-showcase-wrapper .layer:nth-child(2){
-  background-size: 100% 100%;
-}
+.portfolio-showcase-wrapper .layer:nth-child(4){opacity: 0.9;}
 
-.portfolio-showcase-wrapper .front .title{
+.portfolio-showcase-wrapper .case:hover .layer:nth-child(2){
+  transform: rotateX(-4deg);
+}
+.portfolio-showcase-wrapper .case:hover .layer:nth-child(3){transform: rotateX(-8deg);}
+.portfolio-showcase-wrapper .case:hover .layer:nth-child(3){transform: rotateX(-10deg);}
+.portfolio-showcase-wrapper .case:hover .layer:nth-child(4){transform: rotateX(-16deg);}
+.portfolio-showcase-wrapper .case:hover .info{
+  cursor: pointer;
+  transform: rotateX(-20deg);
+  transform-origin: 100% 100%;
+}
+.portfolio-showcase-wrapper .dev .layer:nth-child(1){background: #2497ff;}
+.portfolio-showcase-wrapper .dev .layer:nth-child(2){background: #2497ff;}
+.portfolio-showcase-wrapper .dev .layer:nth-child(3){background: #2497ff;}
+
+.portfolio-showcase-wrapper .front .layer:nth-child(1){background: #ffab39;}
+.portfolio-showcase-wrapper .front .layer:nth-child(2){background: #ffab39;}
+.portfolio-showcase-wrapper .front .layer:nth-child(3){background: #ffab39;}
+
+.portfolio-showcase-wrapper .fullstack .layer:nth-child(1){background: #ff0338;}
+.portfolio-showcase-wrapper .fullstack .layer:nth-child(2){background: #ff0338;}
+.portfolio-showcase-wrapper .fullstack .layer:nth-child(3){background: #ff0338;}
+
+
+.portfolio-showcase-wrapper .info .title{
   margin-bottom: 10px;
   font-size: 24px;
+  
+  padding: 5px 10px;
+  transform: translateX(-60px);
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  background: #0060b7;
 }
-.portfolio-showcase-wrapper .front .company{
-  font-size: 18px;
+.portfolio-showcase-wrapper .dev .info .title{background: #2497ff;}
+.portfolio-showcase-wrapper .front .info .title{background: #ffab39;}
+.portfolio-showcase-wrapper .fullstack .info .title{background: #ff0338;}
+
+.portfolio-showcase-wrapper .info .company{
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
 }
+
 /* ===== Portfolio end ===== */
 

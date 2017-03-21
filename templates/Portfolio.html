@@ -11,22 +11,29 @@
     
     <div class="portfolio-info">
       <h3>Portfolio</h3>
-      <br>
-      A simple a list of my collaboration on various projects these past years. As a full stack developer I had different roles on every project some of them are entirely made by myself.
+      <p>A simple a list of my collaboration on various projects these past years. As a full stack developer I had different roles on every project some of them are entirely made by myself.</p>
+      <h5>Colors identifier</h5>
+      <ul class="colors-list">
+        <li><i class="fa fa-paint-brush front" aria-hidden="true"></i> Front-end</li>
+        <li><i class="fa fa-paint-brush dev" aria-hidden="true"></i> Back and front-end</li>
+        <li><i class="fa fa-paint-brush fullstack" aria-hidden="true"></i> Development and design</li>
+      </ul>
     </div>
 
     <div class="portfolio-showcase-wrapper">
       {% for project in projects %}
-        <div class="case">
+        <div class="case {{ project.role }}">
+          <div class="layer"></div>
+          <div class="layer"></div>
           <div class="layer"></div>
           <div class="layer" style="background-image: url('{{ project.thumbnail }}');"></div>
-          <div class="front">
+          <div class="info">
             <div class="title">{{ project.name }}</div>
-            <div class="company"><i class="fa fa-copyright" aria-hidden="true"></i> {{ project.company }}</div>
-          </div><!-- front end -->
-        </div>
+            <div class="company">{{ project.date }} <br> @ {{ project.company }}</div>
+          </div><!-- info end -->
+        </div><!-- case end -->
       {% endfor %}
-    </div>
+    </div><!-- portfolio-showcase-wrapper end -->
     
   </div><!-- portfolio-content-wrapper end -->
   

@@ -26,8 +26,21 @@ class Portfolio
     $projects = new Projects($this->db);
     $projects = $projects->getAllProjects();
     
+    
+    $project_array = array(); $i = 0;
+    
+    while ($row = $projects->fetch())
+    {
+      $project_array[$i]['name']       = $row['name'];
+      $project_array[$i]['role']       = $row['role'];
+      $project_array[$i]['thumbnail']  = $row['thumbnail'];
+      $project_array[$i]['company']    = $row['company'];
+      $project_array[$i]['date']       = substr($row['date'], 0, 7);
+      $i++;
+    }
+    
     $data = [
-      'projects' => $projects,
+      'projects' => $project_array,
     ];
     
     $html = $this->renderer->render('Portfolio', $data);
