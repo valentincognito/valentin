@@ -12,6 +12,10 @@ class Articles
   }
 
   public function getAllArticles() {
-    return $this->db->query('SELECT * FROM articles');
+    return $this->db->query('SELECT * FROM articles ORDER BY date DESC');
+  }
+  
+  public function getArticleBySlug() {
+    return $this->db->prepare('SELECT * FROM articles WHERE slug = ? ORDER BY date DESC');
   }
 }

@@ -1,0 +1,22 @@
+{% extends "Layout.html" %}
+{% block content %}
+  
+  <style>
+    header{display: none;}
+  </style>
+
+  <h3>{{ article.title }}</h3>
+
+  <div class="articles-detail-wrapper">
+    {{ article.content | raw }}
+  </div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+  $(document).ready(function(){
+
+  });/* document ready end */
+</script>
+{% endblock %}

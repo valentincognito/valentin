@@ -5,6 +5,7 @@ namespace App\Controllers;
 use Http\Request;
 use Http\Response;
 use App\Template\FrontendRenderer;
+
 use App\Models\Articles;
 
 class Home

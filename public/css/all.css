@@ -63,6 +63,32 @@ h5{
   color: #191818;
 }
 
+
+/* Articles title style */
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: #ffffff;
+  font-size: 0.9em !important;
+}
+.articles-detail-wrapper a{
+  display: inline-block;
+  color: #0060b7;
+}
+.articles-detail-wrapper h2{
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #191818;
+}
+.articles-detail-wrapper h3{
+  position: relative;
+  display: block;
+  padding-left: 0px;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #191818;
+}
+.articles-detail-wrapper h3:before{display: none;}
+.articles-detail-wrapper h3:after{display: none;}
+/* Articles title style end */
 /* ===== Layout ===== */
 #layout {
   position: relative;
