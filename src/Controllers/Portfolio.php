@@ -35,6 +35,7 @@ class Portfolio
       $project_array[$i]['role']       = $row['role'];
       $project_array[$i]['thumbnail']  = $row['thumbnail'];
       $project_array[$i]['company']    = $row['company'];
+      $project_array[$i]['languages']  = $row['languages'];
       $project_array[$i]['date']       = substr($row['date'], 0, 7);
       $i++;
     }
