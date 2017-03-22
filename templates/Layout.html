@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Valentin</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
     
@@ -27,6 +29,14 @@
               {% endfor %}
             </ul>
           </div>
+        </div>
+      
+        <div id="mobile_menu">
+          <ul class="mobile-menu-list">
+              {% for item in menuItems %}
+                <li><a href="{{ item['href'] }}">{{ item['text'] }}</a></li>
+              {% endfor %}
+            </ul>
         </div>
       
         <header class="header">
