@@ -217,7 +217,8 @@ h5{
 }
 .home-features-list li{margin-bottom: 10px;}
 .home-features-list .chart-bar{
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 4px;
   border-radius: 10px;
   background-color: #ececec;
@@ -385,13 +386,19 @@ h5{
 }
 /* ===== Portfolio end ===== */
 
-#mobile_menu{
-  display: none;
-}
+/* ===== Media Queries ===== */
+#mobile_menu{display: none;}
 
 @media (max-width: 700px) {
   #layout {
     padding-left: 0px;
+    padding-bottom: 60px;
+  }
+  .content {
+    margin: 0;
+    padding: 0 2em;
+    width: 100%;
+    margin-bottom: 50px;
   }
   #menu{
     display: none;
@@ -423,4 +430,4 @@ h5{
   }
   
 }
-
+/* ===== Media Queries end ===== */
