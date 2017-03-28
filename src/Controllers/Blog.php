@@ -30,11 +30,12 @@ class Blog
     
     while ($row = $articles->fetch())
     {
-      $article_array[$i]['title'] = $row['title'];
-      $article_array[$i]['slug']  = $row['slug'];
-      $article_array[$i]['year']  = substr($row['date'], 0, 4);
-      $article_array[$i]['month'] = substr($row['date'], 5, 2);
-      $article_array[$i]['day']   = substr($row['date'], 8, 2);
+      $article_array[$i]['title']   = $row['title'];
+      $article_array[$i]['slug']    = $row['slug'];
+      $article_array[$i]['year']    = substr($row['date'], 0, 4);
+      $article_array[$i]['month']   = substr($row['date'], 5, 2);
+      $article_array[$i]['day']     = substr($row['date'], 8, 2);
+      $article_array[$i]['preview'] = $row['preview'];
       $i++;
     }
     

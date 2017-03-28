@@ -293,7 +293,7 @@ h5{
   background-color: rgba(0, 0, 0, 0.2);
   color: #fff;
   transform-origin: 100% 100%;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 0.9);
 }
 .portfolio-showcase-wrapper .layer{
   position: absolute;
@@ -304,7 +304,7 @@ h5{
   opacity: 0.5;
   background: #0060b7;
   transform-origin: 100% 100%;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 0.9);
 }
 .portfolio-showcase-wrapper .layer:nth-child(4){opacity: 0.9;overflow: hidden;background-size: 100% 100%;}
 .portfolio-showcase-wrapper .layer:nth-child(4):before{
