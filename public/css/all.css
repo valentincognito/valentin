@@ -397,6 +397,29 @@ h5{
 }
 /* ===== Portfolio end ===== */
 
+/* ===== Articles ===== */
+.articles-list-wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.articles-list-wrapper .box{
+  position: relative;
+  width: 250px;
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+  background-size: cover;
+}
+.articles-list-wrapper .box .inner{
+  height: 100%;
+  padding: 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* ===== Articles end ===== */
+
 /* ===== Media Queries ===== */
 #mobile_menu{display: none;}
 

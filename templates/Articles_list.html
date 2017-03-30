@@ -1,12 +1,16 @@
 {% extends "Layout.html" %}
 {% block content %}
   
-  
+  <div class="articles-list-wrapper">
   {% for article in articles %}
-    <h3><a href="{{ article.year }}/{{ article.month }}/{{ article.day }}/{{ article.slug }}">{{ article.title }}</a></h3>
-    <p class="article-preview">{{ article.preview }}...</p>
+    <div class="box" style="background-image: url('images/articles/thumbnails/{{ article.thumbnail }}');">
+      <div class="inner">
+        <a href="{{ article.year }}/{{ article.month }}/{{ article.day }}/{{ article.slug }}">{{ article.title }}</a>
+<!--        <p class="article-preview">{{ article.preview }}...</p>-->
+      </div>
+    </div>
   {% endfor %}
-
+  </div>
   
 {% endblock %}
 
