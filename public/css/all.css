@@ -463,5 +463,41 @@ h5{
     display: none;
   }
   
+  .portfolio-info {
+    float: none;
+    position: relative;
+    width: 100%;
+    top: 0px;
+    left: 0px; 
+  }
+  .portfolio-info img{max-width: 100%;display: none;}
+  
+  
+  .articles-list-wrapper .box{
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+  .portfolio-showcase-wrapper {
+    float: none;
+    width: 100%;
+    text-align: right;
+    transform: perspective(0px) translate3d(0px, -250px, 0px) scale3d(0.8, 0.8, 1) rotateY(0deg) rotateZ(0deg);
+    transform-style: preserve-3d;
+  }
+  
+  .portfolio-showcase-wrapper .case {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 10px;
+    text-align: left;
+    color: #fff;
+  }
+  
+  
+  
 }
 /* ===== Media Queries end ===== */
