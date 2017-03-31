@@ -409,14 +409,32 @@ h5{
   height: 200px;
   margin: 10px;
   text-align: center;
-  background-size: cover;
+  background-size: 100%;
+  transition: all 0.2s ease-in-out;
 }
+.articles-list-wrapper .box:hover{
+  
+}
+
 .articles-list-wrapper .box .inner{
   height: 100%;
   padding: 20px;
   font-size: 18px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.articles-list-wrapper .preview-box{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 100px;
+  padding: 0px 0px;
+  font-size: 12px;
+  color: #000;
+  text-align: left;
+  background: #fff;
+  overflow: hidden;
 }
 /* ===== Articles end ===== */
 
