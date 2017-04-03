@@ -39,6 +39,34 @@
       {% endfor %}
     </div><!-- portfolio-showcase-wrapper end -->
     
+    <div class="mobile-portfolio-showcase-wrapper">
+      <!-- Slider main container -->
+      <div class="swiper-container portfolio">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          {% for project in projects %}
+          <div class="swiper-slide">
+            <div class="case {{ project.role }}" data-id="{{ project.id }}">
+              <div class="layer"></div>
+              <div class="layer"></div>
+              <div class="layer"></div>
+              <div class="layer" style="background-image: url('{{ project.thumbnail }}');"></div>
+              <div class="info">
+                <div class="title">_{{ project.name }}</div>
+                <div class="company">{{ project.date }}</div>
+                <div class="languages">{{ project.languages }}</div>
+              </div><!-- info end -->
+            </div><!-- case end -->
+          </div>
+          {% endfor %}
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+      </div><!-- Slider main container end -->
+    </div><!-- mobile-portfolio-showcase-wrapper end -->
+    
   </div><!-- portfolio-content-wrapper end -->
   
 {% endblock %}
@@ -51,6 +79,15 @@
       var page_name = 'project_'+$(this).attr('data-id');
       $(".portfolio-info").load(page_name);
     });
+    
+    var portfolio_swiper = new Swiper ('.swiper-container', {
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 2,
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 30
+    });        
     
   });/* document ready end */
 </script>

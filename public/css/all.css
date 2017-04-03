@@ -484,6 +484,7 @@ h5:before{
 
 /* ===== Media Queries ===== */
 #mobile_menu{display: none;}
+.mobile-portfolio-showcase-wrapper{display: none;}
 
 @media (max-width: 700px) {
   #layout {
@@ -525,53 +526,73 @@ h5:before{
     display: none;
   }
   
+  
+  
+  
+  
   .portfolio-info {
+    float: none;
     position: relative;
-    width: 60%;
+    width: 100%;
     top: 0px;
     left: 0px; 
   }
   .portfolio-info img{max-width: 100%;display: none;}
   
-
-  .portfolio-showcase-wrapper {
-    width: 40%;
-    text-align: right;
-    transform: perspective(0px) translate3d(0px, 0px, 0px) scale3d(0.8, 0.8, 1) rotateY(0deg) rotateZ(0deg);
-    transform-style: preserve-3d;
-  }
   
-  .portfolio-showcase-wrapper .case {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
+  .portfolio-showcase-wrapper{display: none;}
+  .mobile-portfolio-showcase-wrapper{display: block;}
+  
+  .swiper-container.portfolio {
     width: 100%;
-    height: 100px;
+  }      
+  
+  .mobile-portfolio-showcase-wrapper{
+    position: fixed;
+    left: 0px;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+  }
+  .mobile-portfolio-showcase-wrapper .case{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
     margin: 10px;
     text-align: left;
     color: #fff;
   }
-  .portfolio-showcase-wrapper .info {
+  .mobile-portfolio-showcase-wrapper .layer{
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
-    padding: 0px;
+    background-color: rgba(0,0,0, 0.3);
+  }
+  .mobile-portfolio-showcase-wrapper .info{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
     transform-origin: 100% 100%;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 0.9);
   }
-  .portfolio-showcase-wrapper .info .title {
+  .mobile-portfolio-showcase-wrapper .info .title{
     position: relative;
     margin-bottom: 10px;
-    font-size: 11px;
+
+    font-size: 13px;
     font-weight: 200;
     line-height: 25px;
     text-transform: uppercase;
+
     padding: 5px 10px;
-    transform: translateX(0px);
     transition: all 0.2s ease-in-out;
     color: #fff;
     background: #0060b7;
@@ -579,12 +600,26 @@ h5:before{
     overflow: hidden;
     opacity: 0.95;
   }
-  .portfolio-showcase-wrapper .info .company {
-    display: none;
-  }
-  .portfolio-showcase-wrapper .info .languages {
+  .mobile-portfolio-showcase-wrapper .info .title:before{
+    content: '';
     position: absolute;
-    bottom: 0px;
+    top: 0px;
+    right: 0px;
+    width: 8px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .mobile-portfolio-showcase-wrapper .dev .info .title{background: #00a7ff;}
+  .mobile-portfolio-showcase-wrapper .front .info .title{background: #ff9e32;}
+  .mobile-portfolio-showcase-wrapper .fullstack .info .title{background: #f9335d;}
+
+  .mobile-portfolio-showcase-wrapper .info .company{
+    font-size: 13px;
+    font-weight: 200;
+  }
+  .mobile-portfolio-showcase-wrapper .info .languages{
+    position: absolute;
+    bottom: 15px;
     right: 0px;
     font-family: monospace;
     font-size: 11px;
@@ -594,9 +629,11 @@ h5:before{
     border-bottom-left-radius: 5px;
     background: rgba(255, 255, 255, 1);
     overflow: hidden;
-    
-    display: none;
   }
+  
+  
+  
+  
   
   
   
