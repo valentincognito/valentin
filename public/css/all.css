@@ -536,9 +536,8 @@ h5:before{
     width: 100%;
     top: 0px;
     left: 0px; 
-  }
-  .portfolio-info img{max-width: 100%;display: none;}
-  
+    padding-bottom: 100px;
+  }  
   
   .portfolio-showcase-wrapper{display: none;}
   .mobile-portfolio-showcase-wrapper{display: block;}
@@ -546,7 +545,9 @@ h5:before{
   .swiper-container.portfolio {
     width: 100%;
   }      
-  
+  .portfolio-content-wrapper {
+    margin-top: 0px;
+  }
   .mobile-portfolio-showcase-wrapper{
     position: fixed;
     left: 0px;
