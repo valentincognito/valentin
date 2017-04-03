@@ -14,17 +14,18 @@
       <p>A simple a list of my collaboration on various projects these past years. As a full stack developer I had different roles on every project some of them are entirely made by myself.</p>
       <h5>Colors identifier</h5>
       <ul class="colors-list">
-        <li><i class="fa fa-paint-brush front" aria-hidden="true"></i> Front-end</li>
-        <li><i class="fa fa-paint-brush dev" aria-hidden="true"></i> Back and front-end</li>
-        <li><i class="fa fa-paint-brush fullstack" aria-hidden="true"></i> Development and design</li>
+        <li><i class="fa fa-circle-o front" aria-hidden="true"></i> Front-end</li>
+        <li><i class="fa fa-circle-o dev" aria-hidden="true"></i> Back and front-end</li>
+        <li><i class="fa fa-circle-o fullstack" aria-hidden="true"></i> Development and design</li>
       </ul>
       
       <img src="/images/portfolio_background2.png" style="opacity: 0.6;" />
     </div>
+    
 
     <div class="portfolio-showcase-wrapper">
       {% for project in projects %}
-        <div class="case {{ project.role }}">
+        <div class="case {{ project.role }}" data-id="{{ project.id }}">
           <div class="layer"></div>
           <div class="layer"></div>
           <div class="layer"></div>
@@ -45,7 +46,12 @@
 {% block scripts %}
 <script type="text/javascript">
   $(document).ready(function(){
-
+    
+    $('.case').click(function(){
+      var page_name = 'project_'+$(this).attr('data-id');
+      $(".portfolio-info").load(page_name);
+    });
+    
   });/* document ready end */
 </script>
 {% endblock %}

@@ -31,6 +31,7 @@ class Portfolio
     
     while ($row = $projects->fetch())
     {
+      $project_array[$i]['id']         = $row['id'];
       $project_array[$i]['name']       = $row['name'];
       $project_array[$i]['role']       = $row['role'];
       $project_array[$i]['thumbnail']  = $row['thumbnail'];

@@ -15,7 +15,7 @@ class FilePageReader implements PageReader
 
   public function readBySlug(string $slug) : string
   {
-    $path = "$this->pageFolder/$slug.md";
+    $path = "$this->pageFolder/$slug.html";
 
     if (!file_exists($path)) {
       throw new InvalidPageException($slug);
