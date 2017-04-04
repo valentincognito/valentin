@@ -77,7 +77,13 @@
     
     $('.case').click(function(){
       var page_name = 'project_'+$(this).attr('data-id');
-      $(".portfolio-info").load(page_name);
+      $(".portfolio-info").html('<div class="spinner"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
+      
+      $(".portfolio-info").load(page_name, function() { 
+        $(this).hide();
+        $(this).fadeIn("normal"); 
+      });
+      
     });
     
     var portfolio_swiper = new Swiper ('.swiper-container', {
