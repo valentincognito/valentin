@@ -166,7 +166,6 @@ h5:before{
   bottom: 0;
   z-index: 1000; 
   background: #191818;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 .menu-link {
@@ -204,6 +203,17 @@ h5:before{
   color: #fff;
   margin: 0;
 }
+
+#menu .menu-social-list{
+  list-style: none;
+  padding: 0px;
+  position: absolute;
+  bottom: 20px;
+  right: -16px;
+}
+#menu .menu-social-list li{padding: 5px 0px;}
+#menu .menu-social-list li a{padding: 0px;}
+#menu .menu-social-list img{width: 35px;}
 /* ===== Menu end ===== */
 
 /* ===== Home ===== */
