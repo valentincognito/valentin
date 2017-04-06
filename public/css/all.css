@@ -565,6 +565,17 @@ h5:before{
     width: 100%;
     text-align: center;
   }
+  
+  .mobile-portfolio-showcase-wrapper:after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,1) 100%); 
+  }
+  
   .mobile-portfolio-showcase-wrapper .case{
     display: block;
     position: relative;
