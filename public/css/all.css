@@ -97,7 +97,7 @@ h5:before{
 }
 .articles-detail-wrapper h3:before{display: none;}
 .articles-detail-wrapper h3:after{display: none;}
-.articles-detail-wrapper img{display: block;max-width: 100%;}
+.articles-detail-wrapper img{display: block;max-width: 100%;margin: 20px 0px;}
 /* Articles title style end */
 /* ===== Layout ===== */
 #layout {

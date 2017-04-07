@@ -45,7 +45,7 @@ $injector->share('App\Menu\ArrayMenuReader');
 
 $injector->share('PDO');
 $injector->define('PDO', [
-    ':dsn' => 'mysql:dbname=knowyoz6_valentincognito;host=50.87.140.115',
+    ':dsn' => 'mysql:dbname=knowyoz6_valentincognito;host=50.87.140.115;charset=utf8',
     ':username' => getenv('PHP_DB_USER'),
     ':passwd' => getenv('PHP_DB_PASS')
 ]);
