@@ -1,6 +1,10 @@
 {% extends "Layout.html" %}
 {% block content %}
-  
+  <style>
+    header{display: none;}
+  </style>
+
+  <h3>Articles</h3>
   <div class="articles-list-wrapper">
   {% for article in articles %}
     <div class="box" style="background-image: url('images/articles/thumbnails/{{ article.thumbnail }}');">
