@@ -176,7 +176,7 @@ h5:before{
 #menu a {
   color: #999;
   border: none;
-  padding: 0.6em 0 0.6em 0.6em;
+  padding: 0.6em;
 }
 #menu .pure-menu,
 #menu .pure-menu ul {
@@ -186,6 +186,7 @@ h5:before{
 #menu .pure-menu ul,
 #menu .pure-menu .menu-item-divided {
   border-top: 1px solid #333;
+  text-align: center;
 }
 #menu .pure-menu li a:hover,
 #menu .pure-menu li a:focus {
@@ -255,8 +256,12 @@ h5:before{
 }
 .home-happy-users-list li{margin-bottom: 10px;}
 .home-happy-users-list li::before {
-  content: "__ ";
+  content: "";
   color: #ececec;
+}
+.home-happy-users-list li:first-child{
+  font-weight: 400;
+  color: #000;
 }
 /* ===== Home end ===== */
 
