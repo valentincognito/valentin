@@ -330,10 +330,6 @@ h5:before{
   float: right;
   width: 60%;
   text-align: right;
-
-  perspective-origin: 50% -50%;
-  transform-style: preserve-3d;
-  perspective: 2000px;
 }
 .portfolio-showcase-wrapper .case{
   cursor: pointer;
@@ -344,6 +340,9 @@ h5:before{
   margin: 10px;
   text-align: left;
   color: #fff;
+  perspective: 500px;
+  perspective-origin: 50% -50%;
+  transform-style: preserve-3d;
 }
 .portfolio-showcase-wrapper .info{
   position: absolute;
@@ -379,10 +378,10 @@ h5:before{
   transform: rotateZ(45deg);
   background: rgba(255, 255, 255, 0.2);
 }
-.portfolio-showcase-wrapper .case:hover .layer:nth-child(2){transform: translateZ(2px) rotateX(-2deg);}
-.portfolio-showcase-wrapper .case:hover .layer:nth-child(3){transform: translateZ(3px) rotateX(-4deg);}
-.portfolio-showcase-wrapper .case:hover .layer:nth-child(4){transform: translateZ(4px) rotateX(-6deg);}
-.portfolio-showcase-wrapper .case:hover .info{cursor: pointer;transform: translateZ(5px) rotateX(-8deg);}
+.portfolio-showcase-wrapper .case:hover .layer:nth-child(2){transform: translateZ(2px) rotateX(-4deg);}
+.portfolio-showcase-wrapper .case:hover .layer:nth-child(3){transform: translateZ(4px) rotateX(-6deg);}
+.portfolio-showcase-wrapper .case:hover .layer:nth-child(4){transform: translateZ(6px) rotateX(-8deg);}
+.portfolio-showcase-wrapper .case:hover .info{cursor: pointer;transform: translateZ(8px) rotateX(-10deg);}
 
 
 .portfolio-showcase-wrapper .dev .layer:nth-child(1){background-color: #00a7ff;opacity: 0.4;}
