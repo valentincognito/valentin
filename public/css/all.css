@@ -185,7 +185,7 @@ h5:before{
 }
 #menu .pure-menu ul,
 #menu .pure-menu .menu-item-divided {
-  border-top: 1px solid #333;
+/*  border-top: 1px solid #333;*/
   text-align: center;
 }
 #menu .pure-menu li a:hover,
@@ -209,12 +209,19 @@ h5:before{
   list-style: none;
   padding: 0px;
   position: absolute;
-  bottom: 20px;
-  right: -16px;
+  width: 100%;
+  bottom: 10px;
+  left: 0px;
+  text-align: center;
 }
-#menu .menu-social-list li{padding: 5px 0px;}
+#menu .menu-social-list li{display: inline-block;padding: 5px 2px;}
 #menu .menu-social-list li a{padding: 0px;}
-#menu .menu-social-list img{width: 35px;}
+#menu .menu-social-list img{width: 24px;}
+
+#menu .main-logo{
+  width: 50%;
+  margin: 20px 0px;
+}
 /* ===== Menu end ===== */
 
 /* ===== Home ===== */
