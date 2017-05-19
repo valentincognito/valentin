@@ -78,6 +78,9 @@ h5:before{
   background: #ffffff;
   font-size: 0.9em !important;
 }
+.articles-detail-wrapper{
+ padding-right: 100px; 
+}
 .articles-detail-wrapper a{
   display: inline-block;
   color: #0060b7;
@@ -97,6 +100,15 @@ h5:before{
 }
 .articles-detail-wrapper h3:before{display: none;}
 .articles-detail-wrapper h3:after{display: none;}
+.articles-detail-wrapper h3 strong {font-weight: 300;}
+.articles-detail-wrapper h4{
+  position: relative;
+  display: block;
+  padding-left: 0px;
+  font-size: 1em;
+  font-weight: 300;
+  color: #191818;
+}
 .articles-detail-wrapper img{display: block;max-width: 100%;margin: 20px 0px;}
 /* Articles title style end */
 /* ===== Layout ===== */
@@ -664,7 +676,9 @@ h5:before{
   
   
   
-  
+  .articles-detail-wrapper{
+   padding-right: 0px; 
+  }
   
   .articles-list-wrapper .box{
     position: relative;
