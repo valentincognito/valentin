@@ -4,11 +4,11 @@
   <style>
     header{display: none;}
   </style>
-  
-  
+
+
 
   <div class="portfolio-content-wrapper clearfix">
-    
+
     <div class="portfolio-info">
       <h3>Portfolio</h3>
       <p>A simple a list of my collaboration on various projects these past years. As a full stack developer I had different roles on every project some of them are entirely made by myself.</p>
@@ -18,10 +18,10 @@
         <li><i class="fa fa-circle-o dev" aria-hidden="true"></i> Back and front-end</li>
         <li><i class="fa fa-circle-o fullstack" aria-hidden="true"></i> Development and design</li>
       </ul>
-      
+
 <!--      <img src="/images/portfolio_background2.png" style="opacity: 0.6;" />-->
     </div>
-    
+
 
     <div class="portfolio-showcase-wrapper">
       {% for project in projects %}
@@ -31,14 +31,14 @@
           <div class="layer"></div>
           <div class="layer" style="background-image: url('{{ project.thumbnail }}');"></div>
           <div class="info">
-            <div class="title">_{{ project.name }}</div>
+            <div class="title">{{ project.name }}</div>
             <div class="company">{{ project.date }}</div>
             <div class="languages">{{ project.languages }}</div>
           </div><!-- info end -->
         </div><!-- case end -->
       {% endfor %}
     </div><!-- portfolio-showcase-wrapper end -->
-    
+
     <div class="mobile-portfolio-showcase-wrapper">
       <!-- Slider main container -->
       <div class="swiper-container portfolio">
@@ -66,34 +66,34 @@
         <div class="swiper-button-next swiper-button-white"></div>
       </div><!-- Slider main container end -->
     </div><!-- mobile-portfolio-showcase-wrapper end -->
-    
+
   </div><!-- portfolio-content-wrapper end -->
-  
+
 {% endblock %}
 
 {% block scripts %}
 <script type="text/javascript">
   $(document).ready(function(){
-    
+
     $('.case').click(function(){
       var page_name = 'project_'+$(this).attr('data-id');
       $(".portfolio-info").html('<div class="spinner"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
-      
-      $(".portfolio-info").load(page_name, function() { 
+
+      $(".portfolio-info").load(page_name, function() {
         $(this).hide();
-        $(this).fadeIn("normal"); 
+        $(this).fadeIn("normal");
       });
-      
+
     });
-    
+
     var portfolio_swiper = new Swiper ('.swiper-container', {
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
       slidesPerView: 2,
       spaceBetween: 10,
       freeMode: true
-    });        
-    
+    });
+
   });/* document ready end */
 </script>
 {% endblock %}

@@ -250,16 +250,16 @@
         },
         {
             "name": "rdlowrey/auryn",
-            "version": "v1.4.1",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rdlowrey/auryn.git",
-                "reference": "c6c92ec081c707f7e9e0a69185665147b30d66de"
+                "reference": "8c4dc07943599ba84f4f89eab8cf43efeef80395"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rdlowrey/auryn/zipball/c6c92ec081c707f7e9e0a69185665147b30d66de",
-                "reference": "c6c92ec081c707f7e9e0a69185665147b30d66de",
+                "url": "https://api.github.com/repos/rdlowrey/auryn/zipball/8c4dc07943599ba84f4f89eab8cf43efeef80395",
+                "reference": "8c4dc07943599ba84f4f89eab8cf43efeef80395",
                 "shasum": ""
             },
             "require": {
@@ -307,7 +307,7 @@
                 "dic",
                 "ioc"
             ],
-            "time": "2017-04-07T16:12:28+00:00"
+            "time": "2017-05-15T06:26:46+00:00"
         },
         {
             "name": "twig/twig",
