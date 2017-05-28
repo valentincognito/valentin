@@ -12,6 +12,6 @@ class Projects
   }
 
   public function getAllProjects() {
-    return $this->db->query('SELECT * FROM projects ORDER BY date DESC');
+    return $this->db->query('SELECT * FROM projects ORDER BY id DESC');
   }
 }
