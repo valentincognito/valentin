@@ -7,7 +7,7 @@ class ArrayMenuReader implements MenuReader
   public function readMenu() : array
   {
     return [
-      ['href' => '/', 'text' => 'Home'],
+      ['href' => '/', 'text' => 'About'],
       ['href' => '/portfolio', 'text' => 'Portfolio'],
       ['href' => '/articles', 'text' => 'Articles'],
     ];
