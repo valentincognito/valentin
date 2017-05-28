@@ -343,6 +343,10 @@ h5{
   float: right;
   width: 60%;
   text-align: right;
+  background-color: #fbfbfb;
+  margin-top: -70px;
+  margin-right: -60px;
+  padding: 50px 70px;
 }
 .portfolio-showcase-wrapper .case{
   cursor: pointer;
@@ -368,6 +372,7 @@ h5{
   color: #fff;
   transform-origin: 100% 100%;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 0.9);
+  overflow: hidden;
 }
 .portfolio-showcase-wrapper .layer{
   position: absolute;
