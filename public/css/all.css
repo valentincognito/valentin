@@ -39,6 +39,7 @@ h3{
   font-weight: 300;
   color: #191818;
   letter-spacing: 1px;
+  line-height: 1em;
 }
 /*h3:before{
   content: '#';
@@ -61,7 +62,7 @@ h5{
   display: inline-block;
   margin-bottom: 15px;
   padding-left: 0px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: 300;
   color: #191818;
 }
@@ -304,6 +305,10 @@ h5{
   padding: 0px;
   font-weight: 200;
 }
+.portfolio-info .colors-list span{
+  font-weight: 200;
+  color: #000;
+}
 .portfolio-info .colors-list .fa.front{margin-right: 10px;color: #ff9e32;}
 .portfolio-info .colors-list .fa.dev{margin-right: 10px;color: #00a7ff;}
 .portfolio-info .colors-list .fa.fullstack{margin-right: 10px;color: #f9335d;}
@@ -401,6 +406,11 @@ h5{
 .portfolio-showcase-wrapper .case:hover .layer:nth-child(4){transform: translateZ(6px) rotateX(-8deg);}
 .portfolio-showcase-wrapper .case:hover .info{cursor: pointer;transform: translateZ(8px) rotateX(-10deg);}
 
+.portfolio-showcase-wrapper .case.active .layer:nth-child(2){transform: translateZ(2px) rotateX(-4deg);}
+.portfolio-showcase-wrapper .case.active .layer:nth-child(3){transform: translateZ(4px) rotateX(-6deg);}
+.portfolio-showcase-wrapper .case.active .layer:nth-child(4){transform: translateZ(6px) rotateX(-8deg);}
+.portfolio-showcase-wrapper .case.active .info{cursor: pointer;transform: translateZ(8px) rotateX(-10deg);}
+
 
 .portfolio-showcase-wrapper .layer:nth-child(1){background-color: #191818;opacity: 0.4;}
 .portfolio-showcase-wrapper .layer:nth-child(2){background-color: #191818;opacity: 0.6;}
@@ -418,17 +428,15 @@ left: 0px;width: 100%;height: 100%;background-color: #191818;opacity: 0;}
 .portfolio-showcase-wrapper .fullstack .layer:nth-child(3){background-color: #191818;opacity: 0.8;}
 .portfolio-showcase-wrapper .fullstack .layer:nth-child(4){background-color: #191818;opacity: 1;}*/
 
-.portfolio-showcase-wrapper .case:hover .title{
-  transform: translateY(0px);
-}
-.portfolio-showcase-wrapper .case:hover .languages{
-  transform: translateY(0px);
-}
-.portfolio-showcase-wrapper .case:hover .info{
-  background-color: #191818;opacity: 1;
-}
-.portfolio-showcase-wrapper .case:hover .layer:nth-child(4):after{content: '';position: absolute;top: 0px;
-left: 0px;width: 100%;height: 100%;background-color: #191818;opacity: 0.9;}
+.portfolio-showcase-wrapper .case:hover .title{transform: translateY(0px);}
+.portfolio-showcase-wrapper .case:hover .languages{transform: translateY(0px);}
+.portfolio-showcase-wrapper .case:hover .info{background-color: #191818;opacity: 1;}
+.portfolio-showcase-wrapper .case:hover .layer:nth-child(4):after{content: '';position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;background-color: #191818;opacity: 0.9;}
+
+.portfolio-showcase-wrapper .case.active .title{transform: translateY(0px);}
+.portfolio-showcase-wrapper .case.active .languages{transform: translateY(0px);}
+.portfolio-showcase-wrapper .case.active .info{background-color: #191818;opacity: 1;}
+.portfolio-showcase-wrapper .case.active .layer:nth-child(4):after{content: '';position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;background-color: #191818;opacity: 0.9;}
 
 .portfolio-showcase-wrapper .info .title{
   position: relative;
