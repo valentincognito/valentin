@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 /**
 * Environment variable
 */
-$environment = 'development';
+$environment = 'production';
 
 /**
 * Register the error handler
@@ -19,7 +19,7 @@ if ($environment !== 'production') {
   $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 } else {
   $whoops->pushHandler(function($e){
-    echo 'Todo: Friendly error page and send an email to the developer';
+    echo 'I am so sorry you got here.... Maybe you should go back to <a href="http://www.valentinvannay.com">safety</a>.';
   });
 }
 $whoops->register();
